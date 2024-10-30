@@ -1,0 +1,47 @@
+<!DOCTYPE html><html lang="en">
+    
+ <head> <meta charset="UTF-8"> 
+ 
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+ 
+ <title>Avatar Date:</title> <link rel="stylesheet" href="style.css" /></head> 
+ 
+ <center>  <body> <div class="wrapper"> <h2 class="question">Hey youu! Are you free this coming sunday?? </h2>
+     
+  <img class="gif" alt="gif" src="https://img1.picmix.com/output/pic/normal/1/4/5/3/9563541_df543.gif" /> 
+  
+   <div class="btn-group"> <button class="yes-btn">Yes</button> <button class="no-btn">No</button> 
+   
+   </div>   <script> yesBtn = document.querySelector(".yes-btn");
+     noBtn = document.querySelector(".no-btn"); 
+      question = document.querySelector(".question");  
+      gif = document.querySelector(".gif");   
+      
+      // Change text and gif when the Yes button is clicked  
+      yesBtn.addEventListener("click", () => {  question.innerHTML = "Do you wanna have a movie date? ";  
+      gif.src = "https://media1.giphy.com/media/vEiCqOzQet1Is/200.webp?cid=790b7611nhwd6pkantsq11wl72zughoea9wv5nc037eua3nz&ep=v1_gifs_search&rid=200.webp&ct=g";  
+      yesBtn.style.display = "none";
+      
+        noBtn.style.display = "none"; });  
+      
+         noBtn.addEventListener("click", () => {  question.innerHTML ="Don't you love me, just a little bit?"; 
+         
+          gif.src = "https://i.pinimg.com/originals/4f/ae/a6/4faea6af7e20fcd3c7bfcea1d5d3053b.gif";   
+          
+          noBtn.style.display = "none";  yesBtn.style.display = "none"; 
+          
+           // Calculate max positions to ensure the button stays within the wrapper  
+           
+           const maxX = wrapperRect.width - noBtnRect.width; 
+           
+            const maxY = wrapperRect.height - noBtnRect.height;  
+            
+             const randomX = Math.floor(Math.random() * maxX); 
+             
+              const randomY = Math.floor(Math.random() * maxY);  
+              
+               noBtn.style.left = randomX + "px";  noBtn.style.top = randomY + "px";  }); </script> 
+                </div>  
+                 </center> 
+                  </body>
+                       </html>
